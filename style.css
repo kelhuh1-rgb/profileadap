@@ -21,7 +21,11 @@
     gap: 20px;
     justify-content: space-between;
 }
-
+.icon{
+    height: 50px;
+    width: 50px;
+    margin:10px;
+}
 .vertical {
     flex: 1 1 100px;
     min-width: 80px;
