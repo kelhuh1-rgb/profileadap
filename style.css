@@ -1,110 +1,174 @@
-body{
-    background-image: linear-gradient(to right,rgb(35, 158, 211), rgb(217, 226, 139));
-    margin: 0 , 0, 0, 0,;
-    padding: 0, 0, 0, 0;
+
+ body {
+    min-height: 100vh; 
+    background-image: linear-gradient(to right, rgb(35, 158, 211), rgb(217, 226, 139));
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-.container{
+
+.container {
     background-color: rgb(255, 255, 255);
-    width: 1000px;
-    height: 700px;
+    max-width: 1000px;
+    width: 95%;
+    height: auto;
     border-radius: 10px;
-    margin: auto;
+    margin: 20px auto;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
 }
-.vertical{
+
+.vertical {
+    flex: 1 1 100px;
+    min-width: 80px;
     height: 700px;
-    width: 100px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
-.big-con{
-    height: 700px;
-    width: 900px;
+
+.big-con {
+    flex: 1 1 600px;
+    min-width: 250px;
+    height: auto;
     background-color: rgb(222, 223, 223);
     border-radius: 10px;
-    align-items: center;
-}
-.header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
-.header input{
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header input {
+    flex: 1 1 200px;
+    min-width: 150px;
+    max-width: 400px;
     height: 50px;
-    width: 400px;
     border-radius: 10px;
     border: none;
-    margin: auto;
+    margin: 10px 0;
 }
-.img1{
+
+.img1 {
     margin: auto;
     height: 50px;
     width: 50px;
     border-radius: 10px;
     background-color: aliceblue;
 }
-.small-con{
+
+.small-con {
     background-color: aliceblue;
-    height: 619px;
     width: 100%;
     border-radius: 10px;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
 }
-.gradient-header{
+
+.gradient-header {
     background-image: linear-gradient(to right,rgb(35, 158, 211), rgb(217, 226, 139));
     height: 100px;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
-.profile{
+
+.profile {
     margin-top: 10px;
-    height: 100px;
     width: 100%;
     border-radius: 10px;
     display: flex;
-    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-.profile img{
-    border-radius: 50px;
+
+.profile img {
+    border-radius: 50%;
     height: 100px;
     width: 100px;
-}
-.con{
-    display: flex;
+    margin: 5px;
 }
 
-.profile button{
-height: 50px;
-width: 80px;
-background-color: rgb(46, 46, 251);
-border-radius: 10px;
-border: none;
-color: aliceblue;
-
+.profile button {
+    height: 50px;
+    width: 80px;
+    background-color: rgb(46, 46, 251);
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    margin: 5px;
 }
-.info{
+
+.info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     width: 100%;
-    height: 410px;
+    max-width: 900px;
+    gap: 20px;
+    padding: 20px;
     margin: auto;
 }
-.name{
-    grid-row: 1fr;
+
+.info > div {
     margin: auto;
+    text-align: center;
 }
-.Language{
-    
-    margin: auto;
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .vertical, .big-con {
+        width: 100%;
+        height: auto;
+    }
+    .header input {
+        max-width: 100%;
+    }
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
-.nicname{
-    margin: auto;
-}
-.gender{
-margin: auto;
-}
-.country{
-margin: auto;
-}
-.timezone{
-    margin: auto;
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .header input {
+        height: 40px;
+        margin: 5px 0;
+    }
+    .profile img {
+        height: 80px;
+        width: 80px;
+    }
+    .profile button {
+        width: 70px;
+        height: 40px;
+    }
+    .info {
+        gap: 15px;
+        padding: 15px;
+    }
 }
